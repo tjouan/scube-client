@@ -1,3 +1,6 @@
+plugins:
+  - name:   handlebars
+    ember:  true
 paths:
   - app
   - vendor
