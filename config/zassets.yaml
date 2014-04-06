@@ -1,0 +1,7 @@
+paths:
+  - app
+  - vendor
+public_file: index.html
+build:
+  - app.js
+  - styles/main.css
