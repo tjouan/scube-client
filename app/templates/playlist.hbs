@@ -1,0 +1,23 @@
+<header>Playlist {{name}}</header>
+
+<p>
+  id: {{id}}<br>
+  name: {{name}}<br>
+</p>
+
+<ul class="actions">
+  <li>
+    {{#link-to 'playlist.edit' this}}
+      edit
+    {{/link-to}}
+  </li>
+  <li>
+    <button {{action "destroy"}}>
+      destroy
+    </button>
+  </li>
+</ul>
+
+<hr>
+
+{{outlet}}

@@ -1,0 +1,17 @@
+<header>Playlists</header>
+
+<ul>
+  {{#each}}
+    <li>
+      <p>
+        {{#link-to 'playlist' this}}
+          {{name}}
+        {{/link-to}}
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'playlists.new'}}
+  new playlist
+{{/link-to}}
