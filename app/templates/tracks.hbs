@@ -1,0 +1,17 @@
+<header>Tracks</header>
+
+<ul>
+  {{#each}}
+    <li>
+      <p>
+        {{#link-to 'track' this}}
+          {{name}}
+        {{/link-to}}
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'tracks.new'}}
+  new track
+{{/link-to}}
