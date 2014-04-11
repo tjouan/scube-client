@@ -5,6 +5,7 @@
 
 #= require_self
 #= require_tree ./controllers
+#= require_tree ./lib
 #= require_tree ./models
 #= require_tree ./routes
 #= require_tree ./templates
