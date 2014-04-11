@@ -1,4 +1,7 @@
 App.Router.map ->
+  @resource 'sessions', ->
+    @route 'new'
+
   @resource 'playlists'
   @resource 'playlists.new', path: '/playlists/new'
   @resource 'playlist', path: '/playlists/:playlist_id', ->

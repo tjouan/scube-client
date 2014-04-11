@@ -1,0 +1,19 @@
+<form>
+  <fieldset>
+    <legend>Sign in</legend>
+
+    <p>
+      <label>user</label>
+      {{input value=email}}
+    </p>
+
+    <p>
+      <label>password</label>
+      {{input type="password" value=password}}
+    </p>
+
+    <button {{action "save"}}>
+      sign in
+    </button>
+  </fieldset>
+</form>
