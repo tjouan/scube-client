@@ -1,6 +1,8 @@
 sessions
 --------
 
+http://webcloud.github.io/blog/2014/04/07/emberjs-authentication-the-right-way-javascript-version/ (user+pass, then token)
+
 http://kbarrett.com/blog/2014/03/24/authentication-with-ember-rails.html
 http://stackoverflow.com/questions/19414393/ember-js-session-cookie-based-authentication-with-rails-and-devise
 http://pivotallabs.com/playing-with-ember-js-and-devise/
