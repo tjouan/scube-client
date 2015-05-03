@@ -1,0 +1,5 @@
+Env =
+  baseURI: '<%= ENV['APP_ENV'] == 'production' ? 'https://host.example' : 'http://localhost:3000' %>'
+
+
+@?.Env = Env

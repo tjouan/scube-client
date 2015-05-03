@@ -1,2 +1,3 @@
+/app/config/environment.coffee.erb
 /public/assets/
 /tmp/

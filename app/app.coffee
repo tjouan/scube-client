@@ -3,6 +3,8 @@
 #= require ember/ember-1.5.0
 #= require ember/ember-data-1.0.0.7-beta.7
 
+#= require ./config/environment
+
 #= require_self
 #= require_tree ./controllers
 #= require_tree ./lib
@@ -20,8 +22,8 @@ App = Ember.Application.create
 
 
 App.ApplicationAdapter = DS.RESTAdapter.extend
-  namespace: 'api'
-  host: 'http://localhost:3000'
+  namespace:  'api'
+  host:       Env.baseURI
 
 
 @?.App = App
