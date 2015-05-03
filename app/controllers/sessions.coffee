@@ -3,4 +3,3 @@ App.SessionsNewController = Ember.ObjectController.extend
     save: ->
       newRecord = @store.createRecord 'session', @get('model')
       newRecord.save()
-      @transitionToRoute 'playlists'
