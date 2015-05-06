@@ -9,7 +9,7 @@ App.TrackController = Ember.ObjectController.extend
 App.TracksNewController = Ember.ObjectController.extend
   actions:
     save: ->
-      newRecord = @store.createRecord('track', @get('model'))
+      newRecord = @store.createRecord 'track', @get('model')
       newRecord.save()
       @transitionToRoute 'track', newRecord
 
