@@ -1,8 +1,7 @@
 App.PlaylistController = Ember.ObjectController.extend
   actions:
     destroy: ->
-      @get('model').deleteRecord()
-      @get('model').save()
+      @get('model').destroyRecord()
       @transitionToRoute 'playlists'
 
 
