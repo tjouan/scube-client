@@ -24,6 +24,5 @@ App.PlaylistController = Ember.ObjectController.extend
 App.PlaylistEditController = Ember.ObjectController.extend
   actions:
     save: ->
-      playlist = @get 'model'
-      playlist.save()
+      @get('model').save()
       @transitionToRoute 'playlist'
