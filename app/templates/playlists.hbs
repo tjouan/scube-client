@@ -1,7 +1,7 @@
 <header>Playlists</header>
 
 <ul>
-  {{#each}}
+  {{#each playlist in playlists}}
     <li>
       <p>
         {{#link-to 'playlist' this}}
