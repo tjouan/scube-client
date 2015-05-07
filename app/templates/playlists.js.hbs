@@ -1,11 +1,11 @@
 <header>Playlists</header>
 
 <ul>
-  {{#each playlist in playlists}}
+  {{#each playlist in model}}
     <li>
       <p>
-        {{#link-to 'playlist' this}}
-          {{name}}
+        {{#link-to 'playlist' playlist}}
+          {{playlist.name}}
         {{/link-to}}
       </p>
     </li>
