@@ -13,14 +13,6 @@ App.PlaylistsNewController = Ember.ObjectController.extend
       @transitionToRoute 'playlists'
 
 
-App.PlaylistController = Ember.ObjectController.extend
-  actions:
-    destroy: ->
-      @get('model').deleteRecord()
-      @get('model').save()
-      @transitionToRoute 'playlists'
-
-
 App.PlaylistEditController = Ember.ObjectController.extend
   actions:
     save: ->
