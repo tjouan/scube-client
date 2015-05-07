@@ -21,6 +21,10 @@ App = Ember.Application.create
   LOG_VIEW_LOOKUPS: true
 
 
+App.Router.reopen
+  location: 'auto'
+
+
 App.ApplicationAdapter = DS.RESTAdapter.extend
   namespace:  'api'
   host:       Env.baseURI
