@@ -4,7 +4,7 @@ App.Router.map ->
 
   @resource 'playlists'
   @route 'playlists.new', path: '/playlists/new'
-  @resource 'playlist', path: '/playlists/:playlist_id', ->
+  @resource 'playlist', path: '/playlists/:id', ->
     @route 'edit'
 
   @resource 'tracks'
