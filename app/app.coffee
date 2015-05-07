@@ -25,6 +25,7 @@ App.Router.reopen
   location: 'auto'
 
 
+#App.ApplicationAdapter = DS.ActiveModelAdapter.extend
 App.ApplicationAdapter = DS.RESTAdapter.extend
   namespace:  'api'
   host:       Env.baseURI
