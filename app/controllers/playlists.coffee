@@ -8,8 +8,7 @@ App.PlaylistController = Ember.ObjectController.extend
 App.PlaylistsNewController = Ember.ObjectController.extend
   actions:
     save: ->
-      newRecord = @store.createRecord 'playlist', @get('model')
-      newRecord.save()
+      @store.createRecord('playlist', @get 'model').save()
       @transitionToRoute 'playlists'
 
 
