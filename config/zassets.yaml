@@ -1,5 +1,5 @@
 plugins:
-  - ember
+  - emblem
 paths:
   - app
   - vendor
