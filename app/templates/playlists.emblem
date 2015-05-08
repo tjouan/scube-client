@@ -1,7 +1,7 @@
 header: h2 Playlists
 
 ul
-  each playlist in model
+  each playlist in this
     li
       p
         = link-to 'playlist' playlist

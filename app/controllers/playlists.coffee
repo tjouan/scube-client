@@ -1,3 +1,6 @@
+App.PlaylistsController = Ember.ArrayController.extend
+  sortProperties: ['name']
+
 App.PlaylistController = Ember.Controller.extend
   actions:
     destroy: ->
