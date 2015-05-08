@@ -20,6 +20,13 @@ App.Router.reopen
   location: 'auto'
 
 
+App.AuthenticatedRoute = Ember.Route.extend
+  actions:
+    error: (reason, transition) ->
+      if reason.status is 401
+        @transitionTo 'authentication'
+
+
 #App.ApplicationAdapter = DS.ActiveModelAdapter.extend
 App.ApplicationAdapter = DS.RESTAdapter.extend
   namespace:  'api'

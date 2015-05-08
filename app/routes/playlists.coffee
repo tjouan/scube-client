@@ -1,4 +1,4 @@
-App.PlaylistsRoute = Ember.Route.extend
+App.PlaylistsRoute = App.AuthenticatedRoute.extend
   model: ->
     @store.find 'playlist'
 
