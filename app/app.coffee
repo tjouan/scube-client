@@ -4,6 +4,7 @@
 #= require_self
 #= require_tree ./controllers
 #= require_tree ./models
+#= require ./routes/authentication
 #= require_tree ./routes
 #= require_tree ./templates
 #= require_tree ./views
@@ -23,14 +24,6 @@ App.addObserver 'token', ->
 
 App.Router.reopen
   location: 'auto'
-
-
-App.AuthenticatedRoute = Ember.Route.extend
-  actions:
-    error: (reason, transition) ->
-      if reason.status is 401
-        @controllerFor('authentication').set 'transition', transition
-        @transitionTo 'authentication'
 
 
 #App.ApplicationAdapter = DS.ActiveModelAdapter.extend
