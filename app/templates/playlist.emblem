@@ -1,15 +1,16 @@
-header: h2
-  | Playlist {{model.name}}
-
-p
-  | id: #{model.id}
-  br
-  | name: #{model.name}
-
-ul
-  li= link-to 'playlist.edit' model | Edit
-  li: button{action "destroy"} Destroy
-
-hr
-
 outlet
+
+unless isEditing
+  header: h2
+    | Playlist {{model.name}}
+
+  p
+    | id: #{model.id}
+    br
+    | name: #{model.name}
+
+  ul
+    li= link-to 'playlist.edit' model | Edit
+    li: button{action "destroy"} Destroy
+
+  hr

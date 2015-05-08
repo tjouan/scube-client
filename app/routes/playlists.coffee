@@ -9,3 +9,8 @@ App.PlaylistsNewRoute = Ember.Route.extend
 
   renderTemplate: ->
     @render 'playlist.edit', controller: 'playlistsNew'
+
+
+App.PlaylistEditRoute = Ember.Route.extend
+  activate:   -> @controllerFor('playlist').set 'isEditing', true
+  deactivate: -> @controllerFor('playlist').set 'isEditing', false
