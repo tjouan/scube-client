@@ -10,4 +10,4 @@ form
 
   ul.actions
     li: button{action "save"} Save
-    li= link-to 'playlist' model | Cancel
+    li: a href="#" click="cancel" Cancel

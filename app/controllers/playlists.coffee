@@ -21,3 +21,7 @@ App.PlaylistEditController = Ember.Controller.extend
     save: ->
       @get('model').save()
       @transitionToRoute 'playlists'
+
+    cancel: ->
+      @get('model').rollback()
+      @transitionToRoute 'playlist'
