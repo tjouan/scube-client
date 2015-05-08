@@ -1,4 +1,4 @@
-App.SessionsNewController = Ember.ObjectController.extend
+App.SessionsNewController = Ember.Controller.extend
   actions:
     save: ->
       @store.createRecord('session', @get 'model').save().then =>
