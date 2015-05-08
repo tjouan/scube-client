@@ -1,2 +1,3 @@
 App.AuthenticationRoute = Ember.Route.extend
-  model: -> Em.Map.create({})
+  setupController: (controller, _context) ->
+    controller.reset()
