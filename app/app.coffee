@@ -16,6 +16,11 @@ App = Ember.Application.create
   LOG_VIEW_LOOKUPS: true
 
 
+App.token = localStorage.token
+App.addObserver 'token', ->
+  localStorage.token = @get 'token'
+
+
 App.Router.reopen
   location: 'auto'
 
