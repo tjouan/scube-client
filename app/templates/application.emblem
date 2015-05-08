@@ -1,7 +1,8 @@
 header: h1 scube-client
 
-nav: ul
-  li= link-to 'Home' 'application'
-  li= link-to 'Playlists' 'playlists'
+if isAuthenticated
+  nav: ul
+    li= link-to 'Home' 'application'
+    li= link-to 'Playlists' 'playlists'
 
 main: outlet
