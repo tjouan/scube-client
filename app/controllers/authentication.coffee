@@ -7,7 +7,11 @@ App.AuthenticationController = Ember.Controller.extend
       params  = session: @getProperties('email', 'password')
       $.post(uri, JSON.stringify(params)).then (response) =>
         App.set 'token', response.session.token
-        @transitionToRoute 'application'
+        if transition = @get 'transition'
+          transition.retry()
+          @set 'transition', null
+        else
+          @transitionToRoute 'application'
       , (error) =>
         @set 'errorMessage', "Cannot authenticate (#{error.status})"
 
