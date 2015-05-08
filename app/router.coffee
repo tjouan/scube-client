@@ -1,6 +1,5 @@
 App.Router.map ->
-  @resource 'sessions', ->
-    @route 'new'
+  @route 'sessions.new', path: '/signin'
 
   @resource 'playlists'
   @route 'playlists.new', path: '/playlists/new'
