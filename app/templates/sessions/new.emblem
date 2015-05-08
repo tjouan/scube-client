@@ -14,3 +14,6 @@ form: fieldset
       == input type='password' value=model.password
 
   button{action "save"} Sign in
+  if authFailure
+    .errors
+      p= authFailure
