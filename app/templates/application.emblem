@@ -4,4 +4,4 @@ nav: ul
   li= link-to 'Home' 'application'
   li= link-to 'Playlists' 'playlists'
 
-main: == outlet
+main: outlet
