@@ -1,5 +1,4 @@
-header
-  h2 Playlists
+header: h2 Playlists
 
 ul
   each playlist in model

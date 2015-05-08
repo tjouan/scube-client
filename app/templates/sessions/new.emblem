@@ -1,17 +1,16 @@
-form
-  fieldset
-    legend Sign in
+form: fieldset
+  legend Sign in
 
-    p
-      label
-        | user
-        br
-        == input value=model.email
+  p
+    label
+      | user
+      br
+      == input value=model.email
 
-    p
-      label
-        | password
-        br
-        == input type='password' value=model.password
+  p
+    label
+      | password
+      br
+      == input type='password' value=model.password
 
-    button{action "save"} Sign in
+  button{action "save"} Sign in
