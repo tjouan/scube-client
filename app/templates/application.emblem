@@ -4,5 +4,6 @@ if isAuthenticated
   nav: ul
     li= link-to 'Home' 'application'
     li= link-to 'Playlists' 'playlists'
+    li: a href="#" click="signout" Sign out
 
 main: outlet

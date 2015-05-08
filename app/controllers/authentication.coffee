@@ -15,6 +15,10 @@ App.AuthenticationController = Ember.Controller.extend
       , (error) =>
         @set 'errorMessage', "Cannot authenticate (#{error.status})"
 
+  revoke: ->
+    App.set 'token', null
+    @transitionToRoute 'authentication'
+
   reset: ->
     @setProperties
       email:        ''
