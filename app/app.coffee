@@ -24,6 +24,9 @@ App.Router.reopen
 App.ApplicationAdapter = DS.RESTAdapter.extend
   namespace:  'api'
   host:       Env.baseURI
+  headers:    ( ->
+    'Authorization': "Token token=#{App.get 'token'}"
+  ).property('App.token')
 
 
 @?.App = App
