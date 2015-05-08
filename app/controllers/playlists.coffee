@@ -1,8 +1,8 @@
 App.PlaylistController = Ember.Controller.extend
   actions:
     destroy: ->
-      @get('model').destroyRecord()
-      @transitionToRoute 'playlists'
+      @get('model').destroyRecord().then =>
+        @transitionToRoute 'playlists'
 
 
 App.PlaylistsNewController = Ember.Controller.extend
