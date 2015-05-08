@@ -1,0 +1,19 @@
+form: fieldset
+  legend Sign in
+
+  p
+    label
+      | user
+      br
+      == input value=email
+
+  p
+    label
+      | password
+      br
+      == input type='password' value=password
+
+  button{action "authenticate"} Sign in
+  if errorMessage
+    .errors
+      p= errorMessage
