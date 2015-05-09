@@ -5,8 +5,7 @@ header: h2 Playlists
 ul
   each playlist in playlists
     li
-      p
-        = link-to 'playlist' playlist
-          = playlist.name
+      = link-to 'playlist' playlist
+        = playlist.name
 
 = link-to 'playlists.new' | New playlist
