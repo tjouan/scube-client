@@ -2,7 +2,7 @@ outlet
 
 unless isEditing
   header: h2
-    | Playlist {{model.name}}
+    | Playlist #{model.name}
 
   p
     | id: #{model.id}
