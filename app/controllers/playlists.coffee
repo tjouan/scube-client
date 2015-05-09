@@ -2,7 +2,6 @@ App.PlaylistsController = Ember.ArrayController.extend
   sortProperties: ['name']
 
   playlists: ( ->
-    console.log @get('search')
     if @get 'search' then @get 'searchedPlaylists' else @
   ).property('search', 'searchedPlaylists')
 

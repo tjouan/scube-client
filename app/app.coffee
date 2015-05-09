@@ -1,9 +1,10 @@
 #= require ./config/environment
+#= require_tree ./lib
 
 #= require_self
 #= require_tree ./controllers
-#= require_tree ./lib
 #= require_tree ./models
+#= require ./routes/authentication
 #= require_tree ./routes
 #= require_tree ./templates
 #= require_tree ./views
@@ -16,6 +17,11 @@ App = Ember.Application.create
   LOG_VIEW_LOOKUPS: true
 
 
+App.token = localStorage.token
+App.addObserver 'token', ->
+  localStorage.token = @get 'token'
+
+
 App.Router.reopen
   location: 'auto'
 
@@ -24,6 +30,9 @@ App.Router.reopen
 App.ApplicationAdapter = DS.RESTAdapter.extend
   namespace:  'api'
   host:       Env.baseURI
+  headers:    ( ->
+    'Authorization': "Token token=#{App.get 'token'}"
+  ).property('App.token')
 
 
 @?.App = App

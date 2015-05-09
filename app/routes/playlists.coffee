@@ -1,4 +1,4 @@
-App.PlaylistsRoute = Ember.Route.extend
+App.PlaylistsRoute = App.AuthenticatedRoute.extend
   model: ->
     @store.find 'playlist'
 
@@ -6,9 +6,6 @@ App.PlaylistsRoute = Ember.Route.extend
 App.PlaylistsNewRoute = Ember.Route.extend
   model: ->
     Em.Map.create({})
-
-  renderTemplate: ->
-    @render 'playlist.edit', controller: 'playlistsNew'
 
 
 App.PlaylistEditRoute = Ember.Route.extend
