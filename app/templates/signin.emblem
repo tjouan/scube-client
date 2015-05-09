@@ -1,14 +1,13 @@
-form: fieldset
-  legend Sign in
+form
+  fieldset
+    legend Sign in
 
-  p
-    label
+    p: label
       | user
       br
       == input value=email
 
-  p
-    label
+    p: label
       | password
       br
       == input type='password' value=password

@@ -2,11 +2,10 @@ form
   fieldset
     legend Playlist
 
-    p
-      label
-        | name
-        br
-        == input value=model.name
+    p: label
+      | name
+      br
+      == input value=model.name
 
   ul.actions
     li: button{action "save"} Save
