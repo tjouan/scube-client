@@ -2,8 +2,11 @@ header: h2 Playlists
 
 == input value=search placeholder='search…'
 
-ul= each playlist in playlists
-  li= link-to 'playlist' playlist
-    = playlist.name
+if playlists
+  ul= each playlist in playlists
+    li= link-to 'playlist' playlist
+      = playlist.name
+else
+  p No playlists found.
 
 link-to 'playlists.new' | New playlist
