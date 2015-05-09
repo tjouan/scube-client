@@ -7,11 +7,11 @@ App.PlaylistRoute = App.AuthenticatedRoute.extend
   model: (params) -> @store.find 'playlist', params.id
 
 
-App.PlaylistsNewRoute = Ember.Route.extend
+App.PlaylistsNewRoute = App.AuthenticatedRoute.extend
   model: ->
     Em.Map.create({})
 
 
-App.PlaylistEditRoute = Ember.Route.extend
+App.PlaylistEditRoute = App.AuthenticatedRoute.extend
   activate:   -> @controllerFor('playlist').set 'isEditing', true
   deactivate: -> @controllerFor('playlist').set 'isEditing', false
