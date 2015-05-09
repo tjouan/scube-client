@@ -2,9 +2,8 @@ header: h2 Playlists
 
 == input value=search placeholder='search…'
 
-ul
-  each playlist in playlists
-    li= link-to 'playlist' playlist
-      = playlist.name
+ul = each playlist in playlists
+  li= link-to 'playlist' playlist
+    = playlist.name
 
 = link-to 'playlists.new' | New playlist
