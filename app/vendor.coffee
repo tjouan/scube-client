@@ -1,3 +1,5 @@
 #= require jquery/jquery-2.1.0
-#= require ember/ember-1.11.1
-#= require ember/ember-data-1.0.0-beta.16.1
+# FIXME: new ember versions require ember.debug instead of ember
+#= require ember.debug
+#  require ember
+#= require ember-data
