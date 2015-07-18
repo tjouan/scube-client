@@ -3,7 +3,7 @@ header: h2 Playlists
 == input value=search placeholder='search…'
 
 if playlists
-  ul= each playlist in playlists
+  ul= each playlist as |playlists|
     li= link-to 'playlist' playlist
       = playlist.name
 else
