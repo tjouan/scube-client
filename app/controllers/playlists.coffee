@@ -1,4 +1,4 @@
-App.PlaylistsController = Ember.ArrayController.extend
+App.PlaylistsController = Ember.Controller.extend
   sortProperties: ['name']
 
   playlists: ( ->
