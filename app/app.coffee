@@ -8,6 +8,7 @@
 #= require_tree ./routes
 #= require_tree ./templates
 #= require_tree ./views
+#= require_tree ./components
 #= require ./router
 
 
