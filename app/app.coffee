@@ -33,6 +33,8 @@ App.ApplicationAdapter = DS.RESTAdapter.extend
   headers:    ( ->
     'Authorization': "Token token=#{App.get 'token'}"
   ).property('App.token')
+  shouldReloadAll: ->
+    false
 
 
 @?.App = App
