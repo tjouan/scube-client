@@ -22,7 +22,7 @@ args="$options $mode $exclude"
 echo "Cleaning compiled assets..."
 find public/assets -type f -not -name .\* -exec rm {} \;
 echo "Compiling assets..."
-APP_ENV=production zassets
+APP_ENV=production bundle exec zassets
 
 # FIXME: temporary hack to compile the index, because zassets doesn't support
 # helpers yet.
