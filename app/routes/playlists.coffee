@@ -1,6 +1,6 @@
 App.PlaylistsRoute = App.AuthenticatedRoute.extend
   model: ->
-    @store.find 'playlist'
+    @store.findAll 'playlist'
 
 
 App.PlaylistRoute = App.AuthenticatedRoute.extend
