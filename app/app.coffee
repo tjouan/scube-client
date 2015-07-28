@@ -17,7 +17,8 @@ App = Ember.Application.create
   LOG_VIEW_LOOKUPS: true
 
 
-App.token = localStorage.token
+if localStorage.token and localStorage.token isnt 'null'
+  App.token = localStorage.token
 App.addObserver 'token', ->
   localStorage.token = @get 'token'
 
