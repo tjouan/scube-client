@@ -9,6 +9,7 @@ App.AuthenticatedRoute = Ember.Route.extend
         @transitionToAuthentication transition
 
   transitionToAuthentication: (transition) ->
+    return if transition.targetName is 'authentication'
     @controllerFor('authentication').set 'transition', transition
     @transitionTo 'authentication'
 
